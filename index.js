@@ -236,7 +236,7 @@ console.log(artists[2].bio);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
+console.log(artists[8].name = 'Vincent Van Gogh');
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
  Use getArtistByIndex to do the following:
  1. Receive an array
@@ -259,13 +259,16 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s() {}
-//   const newCentury = artists.split('')
-//   for (let i = 0; i < artists.length; i++) {
-//     if (artists[i].years.includes("1900-2000"))
-//       newCentury.push(artists[i].year)
-//   }
-// }
+function get20s(testArr) {
+  let newCentury = [];
+  for (let i = 0; i < testArr.length; i++) {
+    let art= testArr[i].years.split(' ');
+    if (art[0] >= 1900){
+      newCentury.push(testArr[i].name)
+    }
+  }
+  return newCentury;
+}
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
  1. Receive an array
@@ -317,14 +320,15 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(artists) {
+function lotsOfArt(testArr) {
   const tonsPainted = [];
-  artists.slice(100, 999)
-      tonsPainted.push(artists.paintings);
-    return artists;
+ for(let i = 0; i < testArr.length; i++){
+  if(testArr[i].paintings > 100){
+tonsPainted.push(testArr[i].name)
+     }
+   }
+   return tonsPainted;
   }
-
-
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
 Programmatically console.log HTML element structure.
