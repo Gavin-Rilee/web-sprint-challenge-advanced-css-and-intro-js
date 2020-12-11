@@ -319,12 +319,11 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 
 function lotsOfArt(artists) {
   const tonsPainted = [];
-  for (let i = 0; i < artists.length; i++) {
-    if (artists[i].paintings.includes > 100)
-      tonsPainted.push(artists[i].paintings);
-    return tonsPainted;
+  artists.slice(100, 999)
+      tonsPainted.push(artists.paintings);
+    return artists;
   }
-}
+
 
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
